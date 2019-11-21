@@ -1,5 +1,5 @@
-#ifndef MAIN_WINDOW_H
-#define MAIN_WINDOW_H
+#ifndef GENERATE_WINDOW_H
+#define GENERATE_WINDOW_H
 
 #include <QWidget>
 #include <QApplication>
@@ -14,24 +14,19 @@
 #include <fstream>
 #include <string>
 #include <iostream>
-#include "generate_window.h"
 
-class mainWindow : public QWidget
+class generate_window : public QDialog
 {
     Q_OBJECT
 
     public:
-    mainWindow();
-
-    public slots:
-    void generation_crypted_text();
+    generate_window(QString text_crypted);
+    ~generate_window();
 
     private:
     QFormLayout *m_main_layout;
-    QTextEdit *m_text_to_crypt;
-    QHBoxLayout *m_hbox_buttons;
-    QPushButton *m_crypt, *m_uncrypt, *m_leave;
-    generate_window *m_generate_window;
+    QTextEdit *m_text_crypted;
+    QPushButton *m_import_in_file;
 };
 
 #endif
