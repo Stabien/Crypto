@@ -25,10 +25,11 @@ class mainWindow : public QWidget
 
     public slots:
     void generation_crypted_text();
+    void generation_uncrypted_text();
 
     private:
     QFormLayout *m_main_layout;
-    QTextEdit *m_text_to_crypt;
+    QTextEdit *m_text_to_change;
     QHBoxLayout *m_hbox_buttons;
     QPushButton *m_crypt, *m_uncrypt, *m_leave;
     generate_window *m_generate_window;
